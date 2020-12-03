@@ -5,8 +5,8 @@ const checkReducer = (state = [], action) => {
       return [...state, food];
 
     case "REMOVE_FROM_CHECKED":
-      const newChecked = state.filter((food) => food !== action.food);
-      return newChecked;
+      const { list } = action;
+      return list;
 
     default:
       return state;

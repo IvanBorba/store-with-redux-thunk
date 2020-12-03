@@ -8,7 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { useDispatch } from "react-redux";
-import { check, uncheck } from "../../store/checked-out/actions";
+import { checkThunk, uncheckThunk } from "../../store/checked-out/thunks";
 
 const useStyles = makeStyles({
   root: {
@@ -61,11 +61,14 @@ const FoodCard = ({ food, isRemovable = false }) => {
       </CardActionArea>
       <CardActions>
         {isRemovable ? (
-          <Button color="primary" onClick={() => dispatch(uncheck(food))}>
+          <Button
+            color="primary"
+            onClick={() => dispatch(uncheckThunk(food.id))}
+          >
             Remover item do carrinho
           </Button>
         ) : (
-          <Button color="primary" onClick={() => dispatch(check(food))}>
+          <Button color="primary" onClick={() => dispatch(checkThunk(food))}>
             Adicionar ao carrinho
           </Button>
         )}

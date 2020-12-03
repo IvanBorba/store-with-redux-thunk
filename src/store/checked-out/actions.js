@@ -3,7 +3,7 @@ export const check = (food) => ({
   food,
 });
 
-export const uncheck = (food) => ({
+export const uncheck = (list) => ({
   type: "REMOVE_FROM_CHECKED",
-  food,
+  list,
 });
