@@ -4,12 +4,11 @@ This project was created with study purposes.
 
 ## API:
 
-At this project i've used the Rick and Morty API (https://rickandmortyapi.com/) and choose axios library to do our HTTP requisitions.
+At this project i've faked some informations at a default state so I can work with the Redux around a store checkout.
 
 ### Purpose:
 
-The purpose of this project is use an Redux-thunk actions to catch all the characters from the API list and display it in the screen,
-also we got an favourites store that uses the local storage to store your favourite chars.
+The purpose of this project is use Redux-thunk actions to handle the products and add it to the checkout.
 
 Feel free to enjoy. 
 
